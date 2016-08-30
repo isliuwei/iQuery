@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css</title>
+	<style>
+		.yellow{
+			background: yellow;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+
+<ul id="oUl">
+	<li class="red">red</li>
+	<li class="yellow" id="red">yellow</li>
+	<li class="obj"><pre>background: blue; color: #fff; font-size: 24px;</pre></li>
+</ul>
+
+
+
+
+<!-- <script src="jquery.js"></script> -->
+<script src="css.js"></script>
+<script>
+	// $('.red').css('background','red');
+	// console.log($('.yellow').css('background-color'));
+	// $('.obj').css(
+	// 	{
+	// 		background: 'blue',
+	// 		color: '#fff',
+	// 		'font-size': '24px'
+	// 	}
+	// );
+
+	/*
+	function getStyle(element,attr)
+	{
+		if(element.currentStyle)
+		{
+			return element.currentStyle[attr];
+		}else{
+			return getComputedStyle(element,null)[attr];
+		}
+
+	}
+	var xx = document.getElementById('red');
+
+	console.log(getStyle(xx,'color'));
+	*/
+
+	console.log($('.yellow').css('color'));
+
+
+	$('.red').css('background','red');
+
+
+
+	$('.obj').css(
+		{
+			background: 'blue',
+			color: '#fff',
+			'font-size': '24px'
+		}
+	);
+</script>	
+</body>
+</html>

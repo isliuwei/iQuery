@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="btn">add li</button>
+	<ul id="ul1">
+		<li class="oLi">1</li>
+		<li class="oLi">2</li>
+		<li id="xx">3<span> span</span></li>
+		<span>span</span>
+	</ul>
+
+	<a href="#" class="a">link</a>
+
+
+
+<script src="on.js"></script>
+<script>
+	$(function(){
+		var oUl = document.getElementById('ul1');
+		$('#btn').on('click',function(){
+			var oLi = document.createElement('li');
+			oLi.innerHTML = Math.random();
+			oUl.appendChild(oLi);
+		});
+		$('#ul1').on('click','.oLi',function(){
+			alert(this.innerHTML);
+		});
+
+		$('#ul1').on('click','#xx',function(){
+			alert(this.innerHTML);
+		});
+
+		$('#ul1').on('click','span',function(){
+			alert(this.innerHTML);
+		});
+
+		$('#ul1').on('click','li',function(){
+			alert(this.innerHTML);
+		});
+
+
+		$('a').on('mouseover',function(){
+			console.log('mouseover');
+		}).on('mouseout',function(){
+			console.log('mouseout');
+		});
+
+
+
+
+
+	});
+
+	/*
+	var oUl = document.getElementById('ul1');
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		var oLi = document.createElement('li');
+		oLi.innerHTML = Math.random();
+		oUl.appendChild(oLi);
+
+	}
+	*/
+	
+</script>
+	
+</body>
+</html>
