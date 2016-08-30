@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iQuery</title>
+</head>
+<body>
+
+<button id="btn">click</button>
+<p class="page">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias blanditiis, eos eius incidunt. Quod unde vero, eum pariatur eius omnis repellendus amet quae, incidunt veniam a qui distinctio, odit quos?</p>
+<ul id="ul1">
+	<li class="li">1</li>
+	<li class="li">2</li>
+	<li>3</li>
+</ul>
+
+
+
+
+<script src="iQuery.js"></script>
+<script>
+	$(function(){
+		$('#btn').on('mouseover',function(){
+			console.log('mouseover');
+		}).on('mouseout',function(){
+			console.log('mouseout');
+		});
+		$('.page').on('click',function(){
+			alert(this.innerHTML);
+		});
+		$('.li').on('click',function(){
+			alert(this.innerHTML);
+		});
+	});
+	
+</script>
+</body>
+</html>
